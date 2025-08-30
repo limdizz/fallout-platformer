@@ -1,0 +1,66 @@
+GIF FRAME EXTRACTION DETAILS
+===========================
+
+Original File: 27308c7177fdeaab4cb13fd933c87a4d.gif
+Frames Extracted: 50
+Animation Duration: 2.00s
+Frame Format: PNG
+Image Dimensions: 1x1
+
+FRAME TIMING INFORMATION
+========================
+
+Frame 1: 40ms
+Frame 2: 40ms
+Frame 3: 40ms
+Frame 4: 40ms
+Frame 5: 40ms
+Frame 6: 40ms
+Frame 7: 40ms
+Frame 8: 40ms
+Frame 9: 40ms
+Frame 10: 40ms
+Frame 11: 40ms
+Frame 12: 40ms
+Frame 13: 40ms
+Frame 14: 40ms
+Frame 15: 40ms
+Frame 16: 40ms
+Frame 17: 40ms
+Frame 18: 40ms
+Frame 19: 40ms
+Frame 20: 40ms
+Frame 21: 40ms
+Frame 22: 40ms
+Frame 23: 40ms
+Frame 24: 40ms
+Frame 25: 40ms
+Frame 26: 40ms
+Frame 27: 40ms
+Frame 28: 40ms
+Frame 29: 40ms
+Frame 30: 40ms
+Frame 31: 40ms
+Frame 32: 40ms
+Frame 33: 40ms
+Frame 34: 40ms
+Frame 35: 40ms
+Frame 36: 40ms
+Frame 37: 40ms
+Frame 38: 40ms
+Frame 39: 40ms
+Frame 40: 40ms
+Frame 41: 40ms
+Frame 42: 40ms
+Frame 43: 40ms
+Frame 44: 40ms
+Frame 45: 40ms
+Frame 46: 40ms
+Frame 47: 40ms
+Frame 48: 40ms
+Frame 49: 40ms
+Frame 50: 40ms
+
+
+Extracted with ❤️ by ConvertICO.COM
+https://convertico.com/gif-frame-extractor/
