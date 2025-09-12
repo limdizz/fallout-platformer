@@ -3,10 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class Quit : MonoBehaviour
 {
-    public void SelectEpisdes()
-    {
-        SceneManager.LoadScene("Episode Selection");
-    }
     public void ExitToMenu()
     {
         SceneManager.LoadScene("Menu");

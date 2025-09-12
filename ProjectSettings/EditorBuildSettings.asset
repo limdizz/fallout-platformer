@@ -12,7 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels.unity
     guid: 903a5be847931804298ddc4524b2518a
   - enabled: 1
-    path: Assets/Scenes/Level 1. Shelter.unity
+    path: Assets/Scenes/Level1Shelter.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: d7d06dd41f7cc5c4699ba79f021076ff
+  - enabled: 1
+    path: Assets/Scenes/Language.unity
+    guid: 10740cb95505f5844bcce30ea0d52b94
+  - enabled: 1
+    path: Assets/Scenes/Resolution.unity
+    guid: 3e99aa4cc085a5c448973520c9d90ec7
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

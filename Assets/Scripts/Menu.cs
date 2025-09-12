@@ -41,6 +41,21 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void SelectSettings()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void SelectLanguage()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void SelectResolution()
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void OnQuitButton()
     {
         Application.Quit();

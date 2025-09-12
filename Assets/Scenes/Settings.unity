@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 18198977}
   - component: {fileID: 18198976}
   m_Layer: 5
-  m_Name: Quit sign
+  m_Name: Back sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 20, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18198976
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
   m_sharedMaterial: {fileID: -4701588429558454487, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 30763525}
   - component: {fileID: 30763524}
   m_Layer: 5
-  m_Name: Settings sign
+  m_Name: Language sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
   m_sharedMaterial: {fileID: -4701588429558454487, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -32.29489, y: 0, z: -10.233398, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 354637615}
   - component: {fileID: 354637614}
   m_Layer: 5
-  m_Name: Play sign
+  m_Name: Controls sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
   m_sharedMaterial: {fileID: -4701588429558454487, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -20.466675, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 424926207}
   - component: {fileID: 424926206}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Language
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -699,8 +699,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.6625, y: 0}
-  m_SizeDelta: {x: 199.845, y: 64.016}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 186.52, y: 64.016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424926206
 MonoBehaviour:
@@ -747,8 +747,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1879600521}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: SelectSettings
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 1133970043}
   - component: {fileID: 1133970042}
   m_Layer: 5
-  m_Name: 'Play '
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: 280}
+  m_AnchoredPosition: {x: -24.511, y: 275}
   m_SizeDelta: {x: 186.52, y: 48.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133970042
@@ -1026,14 +1026,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1133970041}
-  - {fileID: 1494708218}
   - {fileID: 424926205}
+  - {fileID: 1494708218}
   - {fileID: 1666997824}
   m_Father: {fileID: 1879600520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -719, y: -80}
+  m_AnchoredPosition: {x: -700, y: -80}
   m_SizeDelta: {x: 186.52002, y: 288.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1267892886
@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 1494708220}
   - component: {fileID: 1494708219}
   m_Layer: 5
-  m_Name: Levels
+  m_Name: Resolution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1164,7 +1164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000002861, y: 140}
+  m_AnchoredPosition: {x: -24.510742, y: 0}
   m_SizeDelta: {x: 186.52, y: 48.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494708219
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 1666997826}
   - component: {fileID: 1666997825}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1372,7 +1372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26.649, y: -140}
+  m_AnchoredPosition: {x: -72, y: -140}
   m_SizeDelta: {x: 186.52, y: 48.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666997825
@@ -1419,9 +1419,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879600521}
-        m_TargetAssemblyTypeName: menu, Assembly-CSharp
-        m_MethodName: OnQuitButton
+      - m_Target: {fileID: 1879600522}
+        m_TargetAssemblyTypeName: Quit, Assembly-CSharp
+        m_MethodName: ExitToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1486,7 +1486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1864614902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1619,6 +1619,7 @@ GameObject:
   - component: {fileID: 1879600518}
   - component: {fileID: 1879600517}
   - component: {fileID: 1879600521}
+  - component: {fileID: 1879600522}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1727,6 +1728,18 @@ MonoBehaviour:
   sign_level1: {fileID: 0}
   image_level2: {fileID: 0}
   sign_level2: {fileID: 0}
+--- !u!114 &1879600522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879600516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889e9e3c103950a4dab75b702b644a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1894215426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1752,7 @@ GameObject:
   - component: {fileID: 1894215429}
   - component: {fileID: 1894215428}
   m_Layer: 5
-  m_Name: Levels sign
+  m_Name: Resolution sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1784,9 +1797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Levels
-
-'
+  m_text: Resolution
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
   m_sharedMaterial: {fileID: -4701588429558454487, guid: 53ba96ef002af89408c51ae24217a3a4, type: 2}
@@ -1851,7 +1862,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -17.908447, y: 0, z: -61.40045, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
