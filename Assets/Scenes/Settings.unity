@@ -747,8 +747,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1879600521}
-        m_TargetAssemblyTypeName: menu, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: SelectLanguage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,7 +949,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1879600521}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnPlayLevel1Button
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1146,7 +1146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1494708218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1213,7 +1213,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1879600521}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: SelectLevels
+        m_MethodName: SelectResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

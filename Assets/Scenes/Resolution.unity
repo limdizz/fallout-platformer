@@ -746,9 +746,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879600521}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: SelectLanguage
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeResolution, Assembly-CSharp
+        m_MethodName: ChangeScreenResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,7 +949,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1879600521}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnPlayLevel1Button
+        m_MethodName: SetResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1211,9 +1211,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879600521}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: SelectResolution
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeResolution, Assembly-CSharp
+        m_MethodName: ChangeScreenResolution
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
