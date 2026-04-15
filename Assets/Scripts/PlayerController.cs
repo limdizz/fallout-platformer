@@ -190,11 +190,23 @@ public class PlayerController : MonoBehaviour
         isReloading = false;
         Debug.Log("Reload complete! Ammo: " + currentAmmo);
     }
+
     void UpdateAmmoUI()
     {
         if (AmmoManager.Instance != null)
         {
             AmmoManager.Instance.SetAmmo(currentAmmo);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bad"))
+        {
+            if (electricShockSound != null)
+            {
+                AudioSource.PlayClipAtPoint(electricShockSound, transform.position);
+            }
         }
     }
 }
