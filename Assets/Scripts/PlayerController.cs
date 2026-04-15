@@ -25,7 +25,18 @@ public class PlayerController : MonoBehaviour
     public int maxJumps = 2;
     private int jumpsRemaining;
     private bool wasOnGround;
+
     public AudioClip shootSound;
+    public AudioClip reloadSound;
+    public AudioClip electricShockSound;
+
+    [Header("Ammo Settings")]
+    public int maxAmmo = 32;
+    private int currentAmmo;
+    private bool isReloading = false;
+
+    [Header("Shooting Conditions")]
+    public bool canShootOnlyWhileRunning = true;
 
     void Start()
     {
@@ -35,6 +46,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         jumpsRemaining = maxJumps;
         wasOnGround = true;
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
     }
 
     void Update()
@@ -44,7 +57,9 @@ public class PlayerController : MonoBehaviour
 
         float currentSpeed = speed;
 
-        bool isRunningInput = Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D));
+        bool isMoving = Mathf.Abs(moveHorizontal) > 0.1f;
+        bool isShiftHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        bool isRunningInput = isMoving && isShiftHeld;
 
         if (isRunningInput)
         {
@@ -58,17 +73,52 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("run", -1.0f);
         }
 
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading && currentAmmo < maxAmmo)
+        {
+            StartCoroutine(Reload());
+        }
+
         bool isShootingInput = Input.GetMouseButtonDown(0);
 
-        if (isShootingInput && Time.time >= nextFireTime)
+        if (isShootingInput && Time.time >= nextFireTime && !isReloading && currentAmmo > 0)
         {
-            AmmoManager.Instance.DecreaseAmmo(1);
-            currentSpeed *= runMultiplier;
-            isShooting = true;
-            anim.SetFloat("shoot", Mathf.Abs(moveHorizontal));
+            bool canShoot = true;
+            string denyReason = "";
 
-            Shoot();
-            nextFireTime = Time.time + fireRate;
+            if (canShootOnlyWhileRunning)
+            {
+                if (!isRunning)
+                {
+                    canShoot = false;
+                    denyReason = "You can only shoot while running! (Shift + A/D)";
+                }
+                else if (!isMoving)
+                {
+                    canShoot = false;
+                    denyReason = "You can only shoot while running! (Shift + A/D)";
+                }
+            }
+
+            if (canShoot)
+            {
+                currentAmmo--;
+                UpdateAmmoUI();
+
+                isShooting = true;
+                anim.SetFloat("shoot", Mathf.Abs(moveHorizontal));
+
+                Shoot();
+                nextFireTime = Time.time + fireRate;
+            }
+            else
+            {
+                Debug.Log(denyReason);
+                
+            }
+        }
+        else if (isShootingInput && currentAmmo <= 0 && !isReloading)
+        {
+            Debug.Log("Out of ammo! Press R to reload.");
         }
         else
         {
@@ -119,5 +169,32 @@ public class PlayerController : MonoBehaviour
         BulletController bulletScript = bullet.GetComponent<BulletController>();
         bulletScript.direction = transform.localScale.x < 0 ? Vector2.right : Vector2.left;
         bulletScript.speed = bulletSpeed;
+    }
+
+    System.Collections.IEnumerator Reload()
+    {
+        isReloading = true;
+
+        if (reloadSound != null)
+        {
+            AudioSource.PlayClipAtPoint(reloadSound, transform.position);
+        }
+
+        Debug.Log("Reloading...");
+
+        yield return new WaitForSeconds(1.5f);
+
+        currentAmmo = maxAmmo;
+        UpdateAmmoUI();
+
+        isReloading = false;
+        Debug.Log("Reload complete! Ammo: " + currentAmmo);
+    }
+    void UpdateAmmoUI()
+    {
+        if (AmmoManager.Instance != null)
+        {
+            AmmoManager.Instance.SetAmmo(currentAmmo);
+        }
     }
 }

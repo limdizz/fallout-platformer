@@ -12,9 +12,15 @@ public class AmmoManager : MonoBehaviour
         if (Instance == null) Instance = this;
     }
 
+    public void SetAmmo(int newAmmo)
+    {
+        ammo = Mathf.Max(0, newAmmo);
+        ammoText.text = ammo.ToString();
+    }
+
     public void DecreaseAmmo(int number)
     {
-        ammo -= number;
+        ammo = Mathf.Max(0, ammo - number);
         ammoText.text = ammo.ToString();
     }
 }
