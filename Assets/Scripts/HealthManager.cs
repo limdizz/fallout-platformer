@@ -61,7 +61,7 @@ public class HealthManager : MonoBehaviour
 
         else if (health <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(6);
         }
     }
 
