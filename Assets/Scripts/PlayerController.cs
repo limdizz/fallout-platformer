@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -38,6 +39,11 @@ public class PlayerController : MonoBehaviour
     [Header("Shooting Conditions")]
     public bool canShootOnlyWhileRunning = true;
 
+    [Header("Knockback Settings")]
+    public float knockbackForce = 15f;
+    public float knockbackDuration = 1f; 
+    private bool isKnockedBack = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isKnockedBack) return;
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         anim.SetFloat("moveX", Mathf.Abs(moveHorizontal));
 
@@ -207,6 +215,24 @@ public class PlayerController : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(electricShockSound, transform.position);
             }
+
+            Vector2 knockbackDirection = (transform.position - other.transform.position).normalized;
+
+            StartCoroutine(ApplyKnockback(knockbackDirection));
         }
+    }
+
+    IEnumerator ApplyKnockback(Vector2 direction)
+    {
+        isKnockedBack = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(knockbackDuration);
+
+        rb.linearVelocity = Vector2.zero;
+        isKnockedBack = false;
     }
 }

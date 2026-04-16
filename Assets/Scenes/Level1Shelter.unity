@@ -9555,6 +9555,8 @@ MonoBehaviour:
   electricShockSound: {fileID: 8300000, guid: 2de4778e0b4c51643b20a6838140ffe4, type: 3}
   maxAmmo: 32
   canShootOnlyWhileRunning: 1
+  knockbackForce: 10
+  knockbackDuration: 0.5
 --- !u!114 &1605712295
 MonoBehaviour:
   m_ObjectHideFlags: 0
